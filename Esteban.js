@@ -62,7 +62,7 @@ function intento(letra) {
   }else{
     cont--;
     document.getElementById("intentos").innerHTML = cont;
-    document.getElementById("acierto").innerHTML = "JAJAJAJAJ";
+    document.getElementById("acierto").innerHTML = "Tointito";
     document.getElementById("acierto").className += "acierto rojo";
     document.getElementById("image"+cont).className += "fade-in";
   }
