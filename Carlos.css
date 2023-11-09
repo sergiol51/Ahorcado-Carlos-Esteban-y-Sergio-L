@@ -83,6 +83,58 @@ h1#msg-final {
 .verde {
   color: green;
 }
+/* Estilo básico para los botones del teclado */
+.letra {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: 1px solid #2980b9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo cuando el botón está deshabilitado */
+.letra:disabled {
+  background-color: #bdc3c7;
+  color: #34495e;
+  border: 1px solid #7f8c8d;
+  cursor: not-allowed;
+}
+
+/* Hover effect */
+.letra:hover {
+  background-color: #2980b9;
+}
+/* Estilo personalizado para los botones del teclado */
+.letra {
+  display: inline-block;
+  padding: 12px;
+  margin: 5px;
+  font-size: 18px;
+  background-color: #f39c12;
+  color: #2c3e50;
+  border: 2px solid #e67e22;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo cuando el botón está deshabilitado */
+.letra:disabled {
+  background-color: #bdc3c7;
+  color: #34495e;
+  border: 2px solid #7f8c8d;
+  cursor: not-allowed;
+}
+
+/* Hover effect */
+.letra:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
 @keyframes zoomInOut {
   0% { transform: scale(0); }
   50% { transform: scale(1); }
