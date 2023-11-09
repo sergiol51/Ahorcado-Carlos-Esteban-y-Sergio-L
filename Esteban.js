@@ -1,7 +1,7 @@
 // ### VARIABLES ###
 
-// palabras
-var palabras = [["zanahoria", "Hortaliza"], ["poderoso", "Un adjetivo"], ["eucalipto", "Un árbol"], ["plaza", "Espacio público"], ["rueda", "Gran invento"], ["cereza", "Una fruta"], ["petanca", "Un juego"], ["higuera", "Un árbol"], ["everest", "Un monte"], ["relampago", "Antecede al trueno"], ["jirafa", "Un animal"], ["luxemburgo", "Un país"], ["Kiribati", "Un país"], ["ilustracion", "Representación gráfica"], ["excursion", "Actividad en la naturaleza"], ["empanadilla", "De la panadería"], ["harina", "De la pastelería"], ["biblioteca", "Lugar para estudiar"], ["trofeo", "Competición"], ["mermelada", "Confitura"]];
+// Array de palabras
+var palabras = [["atlantico", "Un océano"], ["ordenador", "Una máquina"], ["roble", "Un árbol"], ["plaza", "Espacio público"], ["rueda", "Algo circular"], ["cereza", "Una fruta"], ["minecraft", "Un juego"], ["higuera", "Un árbol"], ["everest", "Un monte"], ["relampago", "Antecede al trueno"], ["jirafa", "Un animal"], ["luxemburgo", "Un país"], ["uruguay", "Un país"], ["ilustracion", "Representación gráfica"], ["excursion", "Actividad en la naturaleza"], ["empanadilla", "De la panadería"], ["pastel", "De la pastelería"], ["colegio", "Lugar para estudiar"], ["carrera", "Competición"], ["mermelada", "Confitura"]];
 // Palabra a averiguar
 var palabra = "";
 // Nº aleatorio
@@ -17,6 +17,8 @@ var buttons = document.getElementsByClassName('letra');
 // Boton de reset
 var btnInicio = document.getElementById("reset");
 
+
+// ### FUNCIONES ###
 
 // Escoger palabra al azar
 function generaPalabra() {
@@ -55,12 +57,12 @@ function intento(letra) {
       if(palabra[i]==letra) oculta[i] = letra;
     }
     hueco.innerHTML = oculta.join("");
-    document.getElementById("acierto").innerHTML = "Yesss";
+    document.getElementById("acierto").innerHTML = "Guau";
     document.getElementById("acierto").className += "acierto verde";
   }else{
     cont--;
     document.getElementById("intentos").innerHTML = cont;
-    document.getElementById("acierto").innerHTML = "JAJAJAJAJAJA";
+    document.getElementById("acierto").innerHTML = "JAJAJAJAJ";
     document.getElementById("acierto").className += "acierto rojo";
     document.getElementById("image"+cont).className += "fade-in";
   }
@@ -78,7 +80,7 @@ function pista() {
 // Compruba si ha finalizado
 function compruebaFin() {
   if( oculta.indexOf("_") == -1 ) {
-    document.getElementById("msg-final").innerHTML = "Te crees guay?";
+    document.getElementById("msg-final").innerHTML = "Felicidades !!";
     document.getElementById("msg-final").className += "zoom-in";
     document.getElementById("palabra").className += " encuadre";
     for (var i = 0; i < buttons.length; i++) {
@@ -87,7 +89,7 @@ function compruebaFin() {
     document.getElementById("reset").innerHTML = "Empezar";
     btnInicio.onclick = function() { location.reload() };
   }else if( cont == 0 ) {
-    document.getElementById("msg-final").innerHTML = "Fatal niño";
+    document.getElementById("msg-final").innerHTML = "Game Over";
     document.getElementById("msg-final").className += "zoom-in";
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
@@ -108,4 +110,3 @@ function inicio() {
 
 // Iniciar
 window.onload = inicio();
-
