@@ -83,6 +83,7 @@ h1#msg-final {
 .verde {
   color: green;
 }
+
 /* Estilo básico para los botones del teclado */
 .letra {
   display: inline-block;
@@ -195,5 +196,119 @@ picture img {
   padding: 3px 2px 2px 6px;
 }
 body {
-   background-image: linear-gradient(to bottom, #ffffff, #ecf7ff, #c2f4ff, #81f4ff, #00f4ff);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-image: url('https://th.bing.com/th/id/R.9c7a113b833751967181f62184239fb4?rik=yhbiGLrIaliUfA&riu=http%3a%2f%2fwww.solofondos.com%2fwp-content%2fuploads%2f2015%2f11%2fimagenes-bonitas-de-flores-para-colocar-como-fondo-de-pantalla4.jpg&ehk=f3TGZK%2b6lMQoaKPjIeGxkvXyuNPefOt8J6lir22c9R8%3d&risl=&pid=ImgRaw&r=0'); /* Ruta de tu imagen de fondo */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 20px;
 }
+
+#juego {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para resaltar las letras */
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#palabra {
+  font-size: 24px;
+  margin: 20px;
+}
+
+#abcdario {
+  margin-top: 20px;
+}
+
+.letra {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: 1px solid #2980b9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.letra:disabled {
+  background-color: #bdc3c7;
+  color: #34495e;
+  border: 1px solid #7f8c8d;
+  cursor: not-allowed;
+}
+
+.letra:hover {
+  background-color: #2980b9;
+}
+
+#intentos {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#acierto {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#msg-final {
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center;
+  color: crimson;
+  transition: all .5s ease;
+  transform: scale(0);
+}
+
+.zoom-in {
+  transform: scale(1) !important;
+}
+
+.acierto {
+  animation: zoomInOut 1s ease;
+}
+
+.rojo {
+  color: red;
+}
+
+.verde {
+  color: green;
+}
+
+.letra {
+  display: inline-block;
+  padding: 12px;
+  margin: 5px;
+  font-size: 18px;
+  background-color: #f39c12;
+  color: #2c3e50;
+  border: 2px solid #e67e22;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.letra:disabled {
+  background-color: #bdc3c7;
+  color: #34495e;
+  border: 2px solid #7f8c8d;
+  cursor: not-allowed;
+}
+
+.letra:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+@keyframes zoomInOut {
+  0% { transform: scale(0); }
+  50% { transform: scale(1); }
+  70% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+
