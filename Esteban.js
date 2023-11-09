@@ -52,25 +52,38 @@ function generaABC (a,z) {
 // Chequear intento
 function intento(letra) {
   document.getElementById(letra).disabled = true;
-  if(palabra.indexOf(letra) != -1) {
-    for(var i=0; i<palabra.length; i++) {
-      if(palabra[i]==letra) oculta[i] = letra;
+
+  if (palabra.indexOf(letra) != -1) {
+    for (var i = 0; i < palabra.length; i++) {
+      if (palabra[i] === letra) oculta[i] = letra;
     }
     hueco.innerHTML = oculta.join("");
-    document.getElementById("acierto").innerHTML = "Guau";
+    
+    // Mensajes de acierto
+    var mensajesAcierto = ["¡Bien hecho!", "Excelente elección", "Correcto", "Sigue así"];
+    var mensajeAcierto = mensajesAcierto[Math.floor(Math.random() * mensajesAcierto.length)];
+
+    document.getElementById("acierto").innerHTML = mensajeAcierto;
     document.getElementById("acierto").className += "acierto verde";
-  }else{
+  } else {
     cont--;
+
+    // Mensajes de error
+    var mensajesError = ["Ups, esa no es", "Casi lo tienes", "Inténtalo de nuevo", "No es esa"];
+    var mensajeError = mensajesError[Math.floor(Math.random() * mensajesError.length)];
+
     document.getElementById("intentos").innerHTML = cont;
-    document.getElementById("acierto").innerHTML = "Tointito";
+    document.getElementById("acierto").innerHTML = mensajeError;
     document.getElementById("acierto").className += "acierto rojo";
-    document.getElementById("image"+cont).className += "fade-in";
+    document.getElementById("image" + cont).className += "fade-in";
   }
+
   compruebaFin();
-  setTimeout(function () { 
-    document.getElementById("acierto").className = ""; 
+  setTimeout(function () {
+    document.getElementById("acierto").className = "";
   }, 800);
 }
+
 
 // Obtener pista
 function pista() {
