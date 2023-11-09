@@ -57,12 +57,12 @@ function intento(letra) {
       if(palabra[i]==letra) oculta[i] = letra;
     }
     hueco.innerHTML = oculta.join("");
-    document.getElementById("acierto").innerHTML = "Bien!";
+    document.getElementById("acierto").innerHTML = "Guau";
     document.getElementById("acierto").className += "acierto verde";
   }else{
     cont--;
     document.getElementById("intentos").innerHTML = cont;
-    document.getElementById("acierto").innerHTML = "Fallo!";
+    document.getElementById("acierto").innerHTML = "JAJAJAJAJ";
     document.getElementById("acierto").className += "acierto rojo";
     document.getElementById("image"+cont).className += "fade-in";
   }
