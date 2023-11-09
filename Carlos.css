@@ -1,4 +1,5 @@
 
+
 * {
   box-sizing: border-box;
 }
@@ -140,4 +141,7 @@ picture img {
 .encuadre {
   border: 2px dashed crimson;
   padding: 3px 2px 2px 6px;
+}
+body {
+   background-image: linear-gradient(to bottom, #ffffff, #ecf7ff, #c2f4ff, #81f4ff, #00f4ff);
 }
